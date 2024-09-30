@@ -1,5 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import{ AnimationComponent } from './animation/animation.component'
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
