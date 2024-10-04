@@ -1,9 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import{ AnimationComponent } from './animation/animation.component'
-
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -18,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'monitor-1080x1920' title`, () => {
+  it(`should have the 'menu' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('monitor-1080x1920');
+    expect(app.title).toEqual('menu');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, monitor-1080x1920');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, menu');
   });
 });
