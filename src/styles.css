@@ -17,9 +17,15 @@ body {
 
 @layer base {
   h1 {
-    @apply tracking-wide leading-none italic text-8xl font-black text-tertiary;
+    @apply tracking-wide leading-none  text-8xl font-black italic text-tertiary;
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

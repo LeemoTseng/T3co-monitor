@@ -3,7 +3,6 @@ export interface MenuItems {
     imgUrl: string;
     linkTo: string;
     colSpan: string;
-
 }
 
 
