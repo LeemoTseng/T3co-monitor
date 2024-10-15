@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MenuItems } from '../menu-items';
+import { MenuItems } from '../interface/menu-items';
 import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
 import { RouterModule } from '@angular/router';

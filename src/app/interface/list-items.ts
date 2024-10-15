@@ -1,4 +1,4 @@
-export interface ListItem {
+export interface ListItems {
   list: string;
   icon: boolean;
 }
