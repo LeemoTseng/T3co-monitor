@@ -1,0 +1,36 @@
+<app-header
+  [isHomeMenu]="false"
+  [pageTitle]="dynamicTitle"
+  [pageTitleStyle]="TitleStyle"
+></app-header>
+<ul *ngFor="let item of privateOfficelistItems" class="w-[800px]">
+  <li class="text-3xl py-3 drop-shadow-lg text-white flex justify-start">
+    <ng-container *ngIf="item.icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="size-10 w-[100px] pt-2"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </ng-container>
+    {{ item.list }}
+  </li>
+</ul>
+<div class="imgAll grid grid-rows-3 grid-cols-3 gap-5">
+  <img class="col-span-1" src="https://picsum.photos/800/401" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/402" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/403" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/404" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/405" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/406" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/407" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/408" alt="" />
+  <img class="col-span-1" src="https://picsum.photos/800/409" alt="" />
+</div>
+<app-footer [pageFooter]="dynamicFooter"></app-footer>

@@ -4,5 +4,3 @@ export interface MenuItems {
     linkTo: string;
     colSpan: string;
 }
-
-

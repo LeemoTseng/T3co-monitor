@@ -17,7 +17,10 @@ body {
 
 @layer base {
   h1 {
-    @apply tracking-wide leading-none  text-8xl font-black italic text-tertiary;
+    @apply tracking-wide leading-none text-8xl font-black italic text-tertiary;
+  }
+  h2 {
+    @apply tracking-wide leading-none text-6xl font-black italic text-tertiary;
   }
 }
 

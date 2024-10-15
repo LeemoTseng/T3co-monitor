@@ -1,2 +1,37 @@
-<app-header [pageTitle]="dynamicTitle"></app-header>
-<img src="https://picsum.photos/id/684/600/400" alt="" />
+<app-header
+  [isHomeMenu]="subIsHomeMenu"
+  [pageTitle]="dynamicTitle"
+></app-header>
+
+<div class="menu grid grid-cols-2 grid-rows-3 gap-5 h-[1480px] w-full">
+  <a
+    *ngFor="let item of spaceItems"
+    matRipple
+    [matRippleColor]="rippleColor"
+    [routerLink]="item.linkTo"
+    [class]="
+      item.colSpan +
+      item.rowSpan +
+      ' ' +
+      'pressing-effect cursor-pointer rounded-2xl relative overflow-hidden'
+    "
+  >
+    <div class="title">
+      <h1
+        class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+      >
+        {{ item.name }}
+      </h1>
+      <div class="img absolute inset-0">
+        <img
+          class="w-full h-full object-cover transform transition active:scale-150"
+          [src]="item.imgUrl"
+          alt=""
+        />
+        <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+      </div>
+    </div>
+  </a>
+</div>
+
+<app-footer [pageFooter]="dynamicFooter"></app-footer>

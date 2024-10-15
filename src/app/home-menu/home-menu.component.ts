@@ -10,7 +10,6 @@ import { HeaderComponent } from '../header/header.component';
   standalone: true,
   imports: [HeaderComponent,CommonModule,MatRippleModule,RouterModule],
   templateUrl: './home-menu.component.html',
-  styleUrl: './home-menu.component.css'
 })
 export class HomeMenuComponent {
   dynamicTitle:string = "Welcome to <br />Premiere New <br />Coworking Space.";

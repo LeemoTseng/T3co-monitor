@@ -7,8 +7,10 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl:'./header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   @Input() pageTitle:string = "Welcome to <br />Premiere New <br />Coworking Space.";
+  @Input() pageTitleStyle:string="";
+  @Input() isHomeMenu:boolean = true;
+
 }
