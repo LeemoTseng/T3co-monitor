@@ -1,0 +1,79 @@
+<app-header [isHomeMenu]="false" [pageTitle]="dynamicTitle"></app-header>
+
+<div *ngFor="let item of plans" class="plans flex flex-col py-3">
+  <div
+    (click)="openPlanItem(item)"
+    matRipple
+    [matRippleColor]="rippleColor"
+    class="plan relative"
+  >
+    <div
+      class="text text-center drop-shadow-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    >
+      <p class="text-6xl text-white font-bold">{{ item.name }}</p>
+      <p class="text-white text-3xl pt-5">{{ item.description }}</p>
+    </div>
+    <div class="imgbox overflow-hidden w-[960px] h-[480px] rounded-xl">
+      <img class="w-full h-full object-cover" [src]="item.imgUrl" alt="" />
+    </div>
+  </div>
+</div>
+
+<!-- ------------- -->
+<!-- View the plan -->
+<!-- ------------- -->
+<div @viewPlanItemAnimation *ngIf="isOpen" class="viewer">
+  <div class="bg-hover"></div>
+  <div
+    class="fixed py-20 rounded-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20"
+  >
+    <mat-icon
+      (click)="closePlanItem()"
+      class="closeBtn text-[60px] text-secondary/30 absolute top-[20px] right-[20px] cursor-pointer"
+      style="width: 60px; height: 60px"
+      >close</mat-icon
+    >
+    <div class="planContent flex flex-col space-y-5 w-[920px]">
+      <div class="title flex items-end space-x-5">
+        <h2 class="border-b-[5px] pb-2 border-primary">
+          {{ selectedPlanItem?.name }}
+        </h2>
+        <p class="text-3xl text-secondary/50 pb-[13px]">
+          {{ selectedPlanItem?.price }}
+        </p>
+      </div>
+      <p class="text-4xl text-secondary/80">
+        {{ selectedPlanItem?.description }}
+      </p>
+      <div *ngIf="selectedPlanItem" class="icons flex space-x-4 px-2 py-5">
+        <div
+          *ngFor="let item of selectedPlanItem.icons"
+          class="frame flex flex-col flex-1 space-y-3 items-center border border-primary p-10 rounded-xl"
+        >
+          <mat-icon
+            class="text-primary text-[100px]"
+            style="width: 100px; height: 100px"
+            >{{ item.name }}</mat-icon
+          >
+          <p class="text-secondary/50 text-[28px] text-center">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+      <ul *ngIf="selectedPlanItem" class="pt-[20px] space-y-3">
+        <li
+          *ngFor="let item of selectedPlanItem.features"
+          class="flex space-x-2 items-center"
+        >
+          <mat-icon
+            class="text-primary text-[32px] min-w-[40px]"
+            style="width: 32px; height: 32px"
+            >task_alt</mat-icon
+          >
+          <p class="text-3xl text-secondary/70">{{ item }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

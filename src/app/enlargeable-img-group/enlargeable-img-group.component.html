@@ -1,0 +1,89 @@
+<!-- <div class="features">
+  <ul *ngFor="let item of privateOfficelistItems" class="w-[800px]">
+    <li class="text-3xl py-3 drop-shadow-lg text-white flex justify-start">
+      <ng-container *ngIf="item.icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="size-10 w-[100px]"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </ng-container>
+      {{ item.list }}
+    </li>
+  </ul>
+</div> -->
+<div
+  class="imgAll grid grid-cols-3 grid-rows-3 gap-5 w-[1000px] mx-auto h-[1520px]"
+>
+  <div
+    *ngFor="let item of images"
+    (click)="enlargeImg(item)"
+    [class]="item.span"
+  >
+    <div class="imgbox relative w-full h-full">
+      <div
+        class="name text-5xl text-white font-bold opacity-80 absolute top-[20px] left-[20px]"
+      >
+        {{ item.name }}
+      </div>
+      <img
+        class="object-cover w-full h-full overflow-hidden rounded-xl"
+        [src]="item.imgUrl"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+
+<div
+  *ngIf="isEnlarged"
+  @enlargeAnimation
+  class="enlarge"
+  (click)="closeEnlarged()"
+>
+  <div class="bg-hover"></div>
+  <div
+    (click)="$event.stopPropagation()"
+    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+  >
+    <div
+      (click)="closeEnlarged()"
+      class="closeBtn cursor-pointer opacity-60 drop-shadow-xl absolute top-[5px] right-[5px] z-20"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-20 text-white"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+        />
+      </svg>
+    </div>
+    <img
+      class="overflow-hidden rounded-xl drop-shadow-lg object-fill max-w-[980px] max-h-[1480px]"
+      [src]="selectedImage?.imgUrl"
+      alt=""
+    />
+    <div class="text flex flex-col justify-center space-y-5 pt-10">
+      <div class="title text-5xl text-white font-bold">
+        {{ selectedImage?.name }}
+      </div>
+      <div class="description text-white text-3xl">
+        {{ selectedImage?.descrioption }}
+      </div>
+    </div>
+  </div>
+</div>

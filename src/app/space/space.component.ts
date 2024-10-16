@@ -45,7 +45,7 @@ export class SpaceComponent {
   },
   {
     name: 'Open Area',
-    linkTo: '/space/private-office',
+    linkTo: '/space/open-area',
     colSpan: "col-span-1",
     rowSpan: "",
     imgUrl: 'https://picsum.photos/600/402',

@@ -1,11 +1,12 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input } from '@angular/core';
+import { SharedModule } from '../../shared.module';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [SharedModule],
   templateUrl:'./header.component.html',
 })
 export class HeaderComponent {

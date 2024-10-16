@@ -1,1 +1,6 @@
-<p>open-area works!</p>
+<app-header [isHomeMenu]="false" [pageTitle]="dynamicTitle"></app-header>
+<app-enlargeable-img-group [images]="openAreaImgs"></app-enlargeable-img-group>
+<app-footer
+  [pageFooter]="dynamicFooter"
+  [pageLinkBackTo]="dynamicLinkBackTo"
+></app-footer>

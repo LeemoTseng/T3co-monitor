@@ -24,13 +24,13 @@ export class HomeMenuComponent {
     {
       name:'plan',
       imgUrl:'https://picsum.photos/600/401',
-      linkTo: '#',
+      linkTo: '/plan',
       colSpan: 'col-span-2'
     },
     {
       name:'PARTNER & MEMBER',
       imgUrl:'https://picsum.photos/600/402',
-      linkTo: '#',
+      linkTo: '/partners-and-members',
       colSpan: 'col-span-2'
     },
         {

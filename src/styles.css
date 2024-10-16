@@ -22,6 +22,9 @@ body {
   h2 {
     @apply tracking-wide leading-none text-6xl font-black italic text-tertiary;
   }
+  .bg-hover {
+    @apply fixed top-0 left-0 bg-black opacity-65 w-full h-full;
+  }
 }
 
 html,
