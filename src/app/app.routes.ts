@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeMenuComponent } from './home-menu/home-menu.component';
 import { SpaceComponent } from './space/space.component';
-import { PrivateOfficeComponent } from './private-office/private-office.component';
-import { HotDeskComponent } from './hot-desk/hot-desk.component';
-import { OpenAreaComponent } from './open-area/open-area.component';
-import { MeetingRoomComponent } from './meeting-room/meeting-room.component';
+import { PrivateOfficeComponent } from './space/private-office/private-office.component';
+import { HotDeskComponent } from './space/hot-desk/hot-desk.component';
+import { OpenAreaComponent } from './space/open-area/open-area.component';
+import { MeetingRoomComponent } from './space/meeting-room/meeting-room.component';
 import { PartnersAndMembersComponent } from './partners-and-members/partners-and-members.component';
 import { PlanComponent } from './plan/plan.component';
 

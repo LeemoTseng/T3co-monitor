@@ -1,24 +1,22 @@
-import { Component,  } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
-import { FooterComponent } from "../footer/footer.component";
-import { ImgItems } from '../interface/img-items';
-import { EnlargeableImgGroupComponent } from '../enlargeable-img-group/enlargeable-img-group.component';
-
+import { Component } from '@angular/core';
+import { HeaderComponent } from "../../header/header.component";
+import { FooterComponent } from "../../footer/footer.component";
+import { EnlargeableImgGroupComponent } from "../../enlargeable-img-group/enlargeable-img-group.component";
+import { ImgItems } from '../../interface/img-items';
 
 @Component({
-  selector: 'app-private-office',
+  selector: 'app-hot-desk',
   standalone: true,
-  imports: [ HeaderComponent, HeaderComponent, FooterComponent, EnlargeableImgGroupComponent],
-  templateUrl: './private-office.component.html',
-
+  imports: [HeaderComponent, FooterComponent, EnlargeableImgGroupComponent],
+  templateUrl: './hot-desk.component.html',
 })
+export class HotDeskComponent {
 
-export class PrivateOfficeComponent {
-  dynamicTitle: string = "Private Office";
-  dynamicFooter: string = "Back to Space";
-  dynamicLinkBackTo: string = "/space";
+  dynamicTitle:string = "Hot Desk";
+  dynamicFooter:string = "Back to Space";
+  dynamicLinkBackTo:string = "/space";
 
-  privateOfficeImgs: ImgItems[] = [{
+    hotDeskImgs: ImgItems[] = [{
     imgUrl: 'https://picsum.photos/2100/900',
     name: "title",
     descrioption: "description",
@@ -56,7 +54,5 @@ export class PrivateOfficeComponent {
   }
 
   ]
-
-
 
 }

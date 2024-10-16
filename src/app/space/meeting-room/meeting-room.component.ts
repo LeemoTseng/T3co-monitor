@@ -1,29 +1,29 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
-import { FooterComponent } from "../footer/footer.component";
-import { EnlargeableImgGroupComponent } from "../enlargeable-img-group/enlargeable-img-group.component";
-import { ImgItems } from '../interface/img-items';
+import { HeaderComponent } from "../../header/header.component";
+import { EnlargeableImgGroupComponent } from "../../enlargeable-img-group/enlargeable-img-group.component";
+import { FooterComponent } from "../../footer/footer.component";
+import { ImgItems } from '../../interface/img-items';
 
 @Component({
-  selector: 'app-hot-desk',
+  selector: 'app-meeting-room',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, EnlargeableImgGroupComponent],
-  templateUrl: './hot-desk.component.html',
+  imports: [HeaderComponent, EnlargeableImgGroupComponent, FooterComponent],
+  templateUrl: './meeting-room.component.html',
 })
-export class HotDeskComponent {
+export class MeetingRoomComponent {
+  dynamicTitle: string = "Meeting Room";
+  dynamicFooter: string = "Back to Space";
+  dynamicLinkBackTo: string = "/space";
 
-  dynamicTitle:string = "Hot Desk";
-  dynamicFooter:string = "Back to Space";
-  dynamicLinkBackTo:string = "/space";
+  meetingRoomImgs: ImgItems[] = [{
 
-    hotDeskImgs: ImgItems[] = [{
-    imgUrl: 'https://picsum.photos/2100/900',
+    imgUrl: 'https://picsum.photos/600/402',
     name: "title",
     descrioption: "description",
     span: "col-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/2100',
+    imgUrl: 'https://picsum.photos/600/402',
     name: "title",
     descrioption: "description",
     span: "col-span-1",
@@ -52,6 +52,7 @@ export class HotDeskComponent {
     span: "col-span-1",
 
   }
+
 
   ]
 
