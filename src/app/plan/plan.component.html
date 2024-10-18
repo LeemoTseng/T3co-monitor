@@ -2,10 +2,13 @@
 
 <div *ngFor="let item of plans" class="plans flex flex-col py-3">
   <div
+    @itemAnimation
     (click)="openPlanItem(item)"
     matRipple
     [matRippleColor]="rippleColor"
-    class="plan relative"
+    [matRippleCentered]="centered"
+    [matRippleRadius]="radius"
+    class="plan relative rounded-xl overflow-hidden cursor-pointer"
   >
     <div
       class="text text-center drop-shadow-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -25,7 +28,7 @@
 <div @viewPlanItemAnimation *ngIf="isOpen" class="viewer">
   <div class="bg-hover"></div>
   <div
-    class="fixed py-20 rounded-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20"
+    class="absolute py-20 rounded-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20"
   >
     <mat-icon
       (click)="closePlanItem()"

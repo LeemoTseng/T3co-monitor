@@ -20,14 +20,21 @@
   </ul>
 </div> -->
 <div
+  @showUpAnimation
   class="imgAll grid grid-cols-3 grid-rows-3 gap-5 w-[1000px] mx-auto h-[1520px]"
 >
   <div
     *ngFor="let item of images"
     (click)="enlargeImg(item)"
+    @itemAnimation
     [class]="item.span"
+    matRipple
+    [matRippleColor]="rippleColor"
+    [matRippleRadius]="radius"
   >
-    <div class="imgbox relative w-full h-full">
+    <div
+      class="imgbox relative w-full h-full bg-secondary/20 overflow-hidden rounded-xl cursor-pointer"
+    >
       <div
         class="name text-5xl text-white font-bold opacity-80 absolute top-[20px] left-[20px]"
       >

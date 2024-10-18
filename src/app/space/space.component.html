@@ -1,13 +1,19 @@
 <app-header
+  @showUpAnimation
   [isHomeMenu]="subIsHomeMenu"
   [pageTitle]="dynamicTitle"
 ></app-header>
 
-<div class="menu grid grid-cols-2 grid-rows-3 gap-5 h-[1480px] w-full">
+<div
+  @showUpAnimation
+  class="menu grid grid-cols-2 grid-rows-3 gap-5 h-[1480px] w-full"
+>
   <a
+    @itemAnimation
     *ngFor="let item of spaceItems"
     matRipple
     [matRippleColor]="rippleColor"
+    [matRippleRadius]="radius"
     [routerLink]="item.linkTo"
     [class]="
       item.colSpan +

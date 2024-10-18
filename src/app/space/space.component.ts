@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { MatRippleModule } from '@angular/material/core';
 
+import { itemAnimation, showUpAnimation } from '../../animation';
+
 interface SpaceItems {
   name: string;
   linkTo: string;
@@ -19,6 +21,7 @@ interface SpaceItems {
   standalone: true,
   imports: [CommonModule, HeaderComponent, RouterModule, MatRippleModule, FooterComponent],
   templateUrl: './space.component.html',
+  animations: [showUpAnimation,itemAnimation]
 })
 
 export class SpaceComponent {
@@ -27,6 +30,8 @@ export class SpaceComponent {
   subIsHomeMenu: boolean = false;
 
   rippleColor: string = 'rgba(255, 255, 255, 0.3)';
+  radius: number = 500;
+
 
   spaceItems: SpaceItems[] = [{
     name: 'Private Office',

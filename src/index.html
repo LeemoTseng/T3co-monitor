@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>T3CO - Greeting Menu</title>
     <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=1080px, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
@@ -28,10 +28,23 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <style>
+      body {
+        transform: scale(0.3);
+        transform-origin: 50% 10%;
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
   </head>
-  <body class="bg-bgcolor">
+
+  <body class="bg-secondary/50">
+    <p class="text-6xl">韻驊螢幕模擬</p>
+    <p class="text-6xl">紅框處為螢幕邊界</p>
     <!-- <div class="p-10 border border-red-600 w-[1080px] h-[1920px]"> -->
-    <div class="p-10 relative border border-red-600 w-[1080px] h-[1920px]">
+    <div
+      class="p-10 bg-bgcolor relative border border-red-600 w-[1080px] h-[1920px]"
+    >
       <app-root></app-root>
     </div>
   </body>

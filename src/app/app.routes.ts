@@ -8,6 +8,7 @@ import { OpenAreaComponent } from './space/open-area/open-area.component';
 import { MeetingRoomComponent } from './space/meeting-room/meeting-room.component';
 import { PartnersAndMembersComponent } from './partners-and-members/partners-and-members.component';
 import { PlanComponent } from './plan/plan.component';
+import { NewsComponent } from './news/news.component';
 
 export const routes: Routes = [
   { path: '', component: HomeMenuComponent },
@@ -23,6 +24,8 @@ export const routes: Routes = [
   {
     path: 'partners-and-members', component: PartnersAndMembersComponent
   },
+  //news
+  {path:'news', component:NewsComponent},
 
   { path: '**', redirectTo: '' } // redirect to home-menu
 

@@ -5,6 +5,7 @@ import { SharedModule } from '../../shared.module';
 import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
+import { itemAnimation, showUpAnimation } from '../../animation';
 
 
 interface PlanItems {
@@ -25,9 +26,9 @@ interface PlanItems {
     trigger('viewPlanItemAnimation', [
       state('void', style({ opacity: 0 })),
       state('*', style({ opacity: 1 })),
-      transition(':enter', animate('300ms ease-out')),
-      transition(':leave', [animate('300ms ease-in', style({ opacity: 0 }))]),
-    ])
+      transition(':enter', [animate('300ms ease-in')]),
+      transition(':leave', [animate('300ms ease-in')]),
+    ]), showUpAnimation, itemAnimation
   ]
 })
 export class PlanComponent implements OnInit {
@@ -43,7 +44,10 @@ export class PlanComponent implements OnInit {
   }
 
   dynamicTitle = 'Plan';
+  
   rippleColor: string = 'rgba(255, 255, 255, 0.3)';
+  centered = true;
+  radius = 600;
 
   isOpen: boolean = false;
   selectedPlanItem: PlanItems | null = null; // To store the selected item

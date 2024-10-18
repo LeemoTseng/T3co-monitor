@@ -1,1 +1,13 @@
-<p>news works!</p>
+<img
+  class="absolute w-full h-full object-cover top-0 left-0"
+  src="https://picsum.photos/1200/600"
+  alt=""
+/>
+
+<app-header
+  class="z-10"
+  [isHomeMenu]="false"
+  [pageTitle]="dynamicTitle"
+></app-header>
+
+<app-footer [pageFooter]="dynamicFooter"></app-footer>

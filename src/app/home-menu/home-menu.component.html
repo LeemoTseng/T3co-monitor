@@ -1,31 +1,41 @@
-<app-header [pageTitle]="dynamicTitle"></app-header>
+<video
+  (click)="showMenu()"
+  autoplay
+  muted
+  loop
+  playsinline
+  class="blur-sm absolute inset-0 w-full h-full object-cover"
+  src="../../assets/T3Co For Web 30sec 720p.mp4"
+></video>
 
-<div class="menu grid grid-cols-4 gap-5">
+<app-header [pageTitle]="dynamicTitle"></app-header>
+<div @showUpAnimation *ngIf="isOpened" class="menu grid grid-cols-4 gap-5">
   <a
     *ngFor="let item of menuItems"
     matRipple
     [matRippleColor]="rippleColor"
+    [matRippleRadius]="radius"
     [routerLink]="item.linkTo"
     [class]="
       item.colSpan +
       ' ' +
-      'h-[400px] pressing-effect cursor-pointer rounded-2xl relative overflow-hidden'
+      'h-[400px] border-2 border-white pressing-effect cursor-pointer rounded-2xl relative overflow-hidden'
     "
   >
     <div class="title">
       <h1
-        class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        class="text-white opacity-70 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
       >
         {{ item.name | uppercase }}
       </h1>
     </div>
     <div class="img absolute inset-0">
-      <img
+      <!-- <img
         class="w-full h-full object-cover transform transition active:scale-150"
         [src]="item.imgUrl"
         alt=""
-      />
-      <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+      /> -->
+      <div class="absolute inset-0 bg-white bg-opacity-20 z-10"></div>
     </div>
   </a>
 </div>

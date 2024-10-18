@@ -19,36 +19,36 @@ export class PrivateOfficeComponent {
   dynamicLinkBackTo: string = "/space";
 
   privateOfficeImgs: ImgItems[] = [{
-    imgUrl: 'https://picsum.photos/2100/900',
+    imgUrl: 'https://picsum.photos/400/300',
     name: "title",
     descrioption: "description",
     span: "col-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/2100',
+    imgUrl: 'https://picsum.photos/300/800',
     name: "title",
     descrioption: "description",
     span: "col-span-1",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
+    imgUrl: 'https://picsum.photos/300/202',
     name: "title",
     descrioption: "description",
     span: "row-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
+    imgUrl: 'https://picsum.photos/300/202',
     name: "title",
     descrioption: "description",
     span: "col-span-2",
 
   }, {
-    imgUrl: 'https://picsum.photos/600/402',
+    imgUrl: 'https://picsum.photos/200/302',
     name: "title",
     descrioption: "description",
     span: "col-span-1",
   }, {
-    imgUrl: 'https://picsum.photos/600/402',
+    imgUrl: 'https://picsum.photos/300/202',
     name: "title",
     descrioption: "description",
     span: "col-span-1",
