@@ -10,6 +10,7 @@ import { PartnersAndMembersComponent } from './partners-and-members/partners-and
 import { PlanComponent } from './plan/plan.component';
 import { NewsComponent } from './news/news.component';
 import { QuizComponent } from './quiz/quiz.component';
+// import { BatContainerComponent } from './festival/bat-container/bat-container.component';
 
 export const routes: Routes = [
   { path: '', component: HomeMenuComponent },
@@ -29,6 +30,9 @@ export const routes: Routes = [
   {path:'news', component:NewsComponent},
   //quiz
   {path:'quiz',component:QuizComponent},
+
+  //test
+  // {path:'test',component:BatContainerComponent},
 
   // other
 

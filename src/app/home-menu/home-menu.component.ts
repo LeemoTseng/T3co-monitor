@@ -24,6 +24,7 @@ export class HomeMenuComponent {
   dynamicTitle: string = "Welcome to <br />Premiere New <br />Coworking Space.";
   rippleColor: string = 'rgba(255, 255, 255, 0.2)';
   radius: number = 500;
+  
 
   isOpened: boolean = false;
 
