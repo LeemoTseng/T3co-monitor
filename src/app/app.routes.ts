@@ -9,6 +9,7 @@ import { MeetingRoomComponent } from './space/meeting-room/meeting-room.componen
 import { PartnersAndMembersComponent } from './partners-and-members/partners-and-members.component';
 import { PlanComponent } from './plan/plan.component';
 import { NewsComponent } from './news/news.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 export const routes: Routes = [
   { path: '', component: HomeMenuComponent },
@@ -26,6 +27,10 @@ export const routes: Routes = [
   },
   //news
   {path:'news', component:NewsComponent},
+  //quiz
+  {path:'quiz',component:QuizComponent},
+
+  // other
 
   { path: '**', redirectTo: '' } // redirect to home-menu
 

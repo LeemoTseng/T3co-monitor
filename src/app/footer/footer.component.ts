@@ -18,6 +18,7 @@ interface iconSet{
 export class FooterComponent {
   @Input()pageFooter:string = "Back to Home"
   @Input()pageLinkBackTo:string = "/home-menu"
+  @Input()footerStyle:string = ""
 
   isStyle: boolean = true
 

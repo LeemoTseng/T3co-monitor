@@ -29,6 +29,7 @@
       rel="stylesheet"
     />
     <style>
+      /* 螢幕模擬用的樣式 */
       body {
         transform: scale(0.3);
         transform-origin: 50% 10%;
@@ -37,15 +38,16 @@
       }
     </style>
   </head>
-
+  <!--  -->
   <body class="bg-secondary/50">
-    <p class="text-6xl">韻驊螢幕模擬</p>
-    <p class="text-6xl">紅框處為螢幕邊界</p>
-    <!-- <div class="p-10 border border-red-600 w-[1080px] h-[1920px]"> -->
-    <div
-      class="p-10 bg-bgcolor relative border border-red-600 w-[1080px] h-[1920px]"
-    >
-      <app-root></app-root>
+    <p class="text-6xl leading-relaxed">韻驊螢幕模擬</p>
+    <p class="text-6xl pb-5">紅框處為螢幕邊界</p>
+    <div class="border border-red-600 w-[1080px] h-[1920px]">
+      <div
+        class="p-10 bg-bgcolor relative border border-red-600 w-[1080px] h-[1920px]"
+      >
+        <app-root></app-root>
+      </div>
     </div>
   </body>
 </html>

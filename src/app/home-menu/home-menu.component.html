@@ -3,13 +3,14 @@
   autoplay
   muted
   loop
-  playsinline
-  class="blur-sm absolute inset-0 w-full h-full object-cover"
+  class="blur-sm absolute top-0 left-0 w-full h-full object-cover"
   src="../../assets/T3Co For Web 30sec 720p.mp4"
 ></video>
-
-<app-header [pageTitle]="dynamicTitle"></app-header>
+<div class="logo absolute">
+  <img class="w-[300px]" src="../../assets/logo.png" alt="" />
+</div>
 <div @showUpAnimation *ngIf="isOpened" class="menu grid grid-cols-4 gap-5">
+  <div class="pt-[500px]"></div>
   <a
     *ngFor="let item of menuItems"
     matRipple
@@ -24,7 +25,7 @@
   >
     <div class="title">
       <h1
-        class="text-white opacity-70 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        class="text-white opacity-90 drop-shadow-md absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
       >
         {{ item.name | uppercase }}
       </h1>

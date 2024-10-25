@@ -34,7 +34,6 @@ interface PlanItems {
 export class PlanComponent implements OnInit {
   httpClient = inject(HttpClient); // Inject the HttpClient service
   plans: PlanItems[] = [];
-
   ngOnInit(): void {
     this.httpClient.get<{ PlanItems: PlanItems[] }>('assets/json/plans.json')
       .subscribe(data => {
@@ -55,7 +54,7 @@ export class PlanComponent implements OnInit {
   openPlanItem(item: PlanItems) {
     this.isOpen = true;
     this.selectedPlanItem = item;
-    console.log(item)
+    // console.log(item)
   }
 
   closePlanItem() {

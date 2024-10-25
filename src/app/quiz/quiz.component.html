@@ -1,0 +1,98 @@
+<app-header [isHomeMenu]="false" [pageTitle]="dynamicTitle"></app-header>
+<div class="quiz"></div>
+<mat-card
+  @viewQuizItemAnimation
+  *ngFor="let item of questions"
+  class="p-10 h-[1500px]"
+  style="background-color: white"
+>
+  <img mat-card-image src="https://picsum.photos/650/400" alt="" />
+
+  <mat-card-content>
+    <p
+      class="text-secondary/90 font-bold text-7xl leading-snug pt-10 opacity-90"
+    >
+      {{ item.questionTW }}
+    </p>
+    <p
+      class="text-secondary/90 pt-0 font-bold text-5xl leading-snug opacity-90"
+    >
+      {{ item.questionEN }}
+    </p></mat-card-content
+  >
+  <div class="options pt-14 flex flex-col space-y-10">
+    <div
+      *ngFor="let option of item.options"
+      (click)="checkAnswer(option)"
+      [@flashRed]="!option.isRight"
+      matRipple
+      [matRippleColor]="rippleColor"
+      [matRippleCentered]="true"
+      [matRippleUnbounded]="false"
+      [matRippleRadius]="radius"
+      [matRippleAnimation]="{ enterDuration: 200 }"
+      class="py-10 text-center font-bold text-secondary/90 cursor-pointer text-5xl w-full bg-secondary/10"
+    >
+      <p>{{ option.content }}</p>
+    </div>
+  </div>
+</mat-card>
+
+<!-- ------------- -->
+<!-- isRight -->
+<!-- ------------- -->
+<div *ngIf="isOpen">
+  <div class="bg-hover z-20"></div>
+  <div
+    @viewQuizItemAnimation
+    class="absolute py-20 rounded-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20 w-[900px]"
+  >
+    <div class="flex flex-col items-center">
+      <p
+        class="text-6xl font-bold leading-normal text-secondary/90 text-center"
+      >
+        Congratulations!
+      </p>
+      <div>
+        <mat-icon
+          class="text-green-400 text-[400px]"
+          style="width: 400px; height: 400px"
+          aria-hidden="false"
+          >task_alt</mat-icon
+        >
+      </div>
+
+      <p class="text-3xl text-center text-secondary/80"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ------------- -->
+<!-- isRight -->
+<!-- ------------- -->
+<div *ngIf="isOpen">
+  <div class="bg-hover z-20"></div>
+  <div
+    @viewQuizItemAnimation
+    class="absolute py-20 rounded-3xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20 w-[900px]"
+  >
+    <div class="flex flex-col items-center">
+      <p
+        class="text-6xl font-bold leading-normal text-secondary/90 text-center"
+      >
+        {{ isRightText }}
+      </p>
+      <div>
+        <mat-icon
+          [class]="isRightClass"
+          style="width: 400px; height: 400px"
+          aria-hidden="false"
+          >{{ isRightIcon }}</mat-icon
+        >
+      </div>
+
+      <p class="text-3xl text-center text-secondary/80"></p>
+    </div>
+  </div>
+</div>
+<app-footer [pageFooter]="dynamicFooter"></app-footer>

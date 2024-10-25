@@ -1,13 +1,85 @@
-<img
-  class="absolute w-full h-full object-cover top-0 left-0"
-  src="https://picsum.photos/1200/600"
-  alt=""
-/>
-
 <app-header
-  class="z-10"
+  [pageTitleStyle]="dynamicTitleStyle"
+  class="z-20"
   [isHomeMenu]="false"
   [pageTitle]="dynamicTitle"
 ></app-header>
+<!-- <div class="frame border"></div> -->
+<!-- Carousel -->
+
+<div class="frame w-full h-[1500px] overflow-y-auto">
+  <div
+    @itemAnimation
+    *ngFor="let item of news"
+    (click)="openNews(item)"
+    matRipple
+    [matRippleColor]="rippleColor"
+    [matRippleRadius]="radius"
+    class="card mb-8 relative cursor-pointer"
+  >
+    <div class="text p-10 absolute top-1/4 z-20 space-y-5">
+      <div class="title">
+        <p class="text-white font-bold text-4xl leading-snug opacity-70">
+          {{ item.date }}
+        </p>
+        <p
+          class="text-white font-bold text-6xl leading-snug pt-5 opacity-90"
+          [innerHTML]="item.title"
+        ></p>
+      </div>
+      <div class="border-b-2 border-white opacity-0-20 w-1/2 pt-5"></div>
+      <div class="content flex flex-col space-y-5">
+        <p
+          class="line-clamp-3 text-white drop-shadow-md font-normal text-3xl leading-loose opacity-70 pt-5"
+        >
+          {{ item.content }}
+        </p>
+      </div>
+    </div>
+    <img
+      class="rounded-3xl object-cover w-full h-[1000px] overflow-hidden"
+      [src]="item.src"
+      alt=""
+    />
+    <div
+      class="alpha rounded-3xl overflow-hidden absolute w-full h-full top-0 left-0 bg-black opacity-40 z-10"
+    ></div>
+  </div>
+</div>
+<!-- ------------- -->
+<!-- View the News -->
+<!-- ------------- -->
+<div *ngIf="isOpened" @viewItemAnimation>
+  <div class="bg-hover z-20"></div>
+
+  <div
+    class="absolute py-20 rounded-xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-10 bg-white z-20 w-[900px]"
+  >
+    <div class="viewWebsite">
+      <mat-icon
+        (click)="closeNews()"
+        role="img"
+        class="mat-icon notranslate closeBtn text-[60px] text-secondary/30 absolute top-[20px] right-[20px] cursor-pointer ng-tns-c3585524422-1 material-icons mat-ligature-font mat-icon-no-color"
+        style="width: 60px; height: 60px"
+        aria-hidden="true"
+        data-mat-icon-type="font"
+        >close</mat-icon
+      >
+      <p
+        class="text-6xl font-bold leading-normal text-secondary/90 text-center"
+        [innerHTML]="selectedNews?.title"
+      ></p>
+      <div class="border-b-4 border-secondary/20 my-10"></div>
+      <img
+        class="w-[350px] h-[350px] mx-auto"
+        [src]="selectedNews?.qrcode"
+        alt=""
+      />
+      <p class="text-3xl text-center text-secondary/80">
+        View more from our website.
+      </p>
+    </div>
+  </div>
+</div>
 
 <app-footer [pageFooter]="dynamicFooter"></app-footer>
