@@ -85,14 +85,10 @@ export class QuizComponent {
     questionTW: "T3CO什麼時候開幕？",
     questionEN: "When does T3CO open?",
     options: [
-      { content: "May, 2024", isRight: false },
-      { content: "Oct, 2024", isRight: true },
+      { content: "May, 2024", isRight: true },
+      { content: "Oct, 2024", isRight: false },
       { content: "Jan, 2024", isRight: false }
-
     ]
   }]
-
-
-
 
 }
