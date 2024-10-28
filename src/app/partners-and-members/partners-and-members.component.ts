@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
 import { CommonModule } from '@angular/common';
-import { itemAnimation, showUpAnimation } from '../../animation';
+import { itemAnimation } from '../../animation';
 import { EventComponent } from '../event/event.component';
 
 
@@ -31,24 +31,24 @@ export class PartnersAndMembersComponent {
   logos: LogoItems[] = [
     {
       logo: "Taiwan digital nomad",
-      link: "../../assets/partner-logo/logo.png-1.png",
+      link: "../../assets/partner-logo/logo-1.png",
       title: "",
       subtitle: ""
     },    {
       logo: "AppWorks",
-      link: "../../assets/partner-logo/logo.png-2.png",
+      link: "../../assets/partner-logo/logo-2.png",
       title: "",
       subtitle: ""
     },
     {
       logo: "TCA",
-      link: "../../assets/partner-logo/logo.png-3.png",
+      link: "../../assets/partner-logo/logo-3.png",
       title: "",
       subtitle: ""
     },
     {
       logo: "CrossBond",
-      link: "../../assets/partner-logo/CB 橫式彩.png",
+      link: "../../assets/partner-logo/CB-橫式彩.png",
       title: "",
       subtitle: ""
     },

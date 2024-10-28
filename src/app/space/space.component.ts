@@ -37,7 +37,7 @@ export class SpaceComponent {
   spaceItems: SpaceItems[] = [{
     name: 'Private Office',
     linkTo: '/space/private-office',
-    imgUrl: '../../assets/space/Private-office-縮圖.png',
+    imgUrl: '../../assets/space/Private-office-thumbnail.png',
     colSpan: "",
     rowSpan: "row-span-2",
   },
@@ -46,20 +46,20 @@ export class SpaceComponent {
     linkTo: '/space/hot-desk',
     colSpan: "col-span-1",
     rowSpan: "",
-    imgUrl: '../../assets/space/Hot Desk 縮圖.jpg',
+    imgUrl: '../../assets/space/Hot-Desk-thunbnail.jpg',
   },
   {
     name: 'Open Area',
     linkTo: '/space/open-area',
     colSpan: "col-span-1",
     rowSpan: "",
-    imgUrl: '../../assets/space/Open-Area-縮圖.png',
+    imgUrl: '../../assets/space/Open-Area-thumbnail.png',
   }, {
     name: 'Meeting Room',
     linkTo: '/space/meeting-room',
     colSpan: "col-span-2",
     rowSpan: "",
-    imgUrl: '../../assets/space/Meeting Room 縮圖.jpg',
+    imgUrl: '../../assets/space/Meeting-Room-thumbnail.jpg',
   }]
 
 }
