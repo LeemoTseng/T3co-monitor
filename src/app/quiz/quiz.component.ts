@@ -66,7 +66,7 @@ export class QuizComponent {
       setTimeout(() => {
         this.isOpen = false;
         this.router.navigate(['/']);
-      }, 2000)
+      }, 1000)
     } else {
       console.log('wrong');
       this.isOpen = true;
@@ -75,7 +75,7 @@ export class QuizComponent {
       this.isRightClass = "text-red-300 text-[400px]";
       setTimeout(() => {
         this.isOpen = false;
-      }, 2000)
+      }, 1000)
     }
 
   }

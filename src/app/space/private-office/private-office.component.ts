@@ -19,38 +19,44 @@ export class PrivateOfficeComponent {
   dynamicLinkBackTo: string = "/space";
 
   privateOfficeImgs: ImgItems[] = [{
-    imgUrl: 'https://picsum.photos/400/300',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Private office/0923_修4.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/300/800',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Private office/P1103405.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: 'https://picsum.photos/300/202',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Private office/P1103588-HDR.png',
+    name: "",
+    descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/300/202',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-2",
+    imgUrl: '../../assets/space/Private office/P1103590.png',
+    name: "",
+    descrioption: "",
+    span: "col-span-1",
+
+  },  {
+    imgUrl: '../../assets/space/Private office/S__219357186_0.jpg',
+    name: "",
+    descrioption: "",
+    span: "col-span-1",
 
   }, {
-    imgUrl: 'https://picsum.photos/200/302',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Private office/P1103592-HDR.png',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: 'https://picsum.photos/300/202',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Private office/P1103594-HDR.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
 
   }

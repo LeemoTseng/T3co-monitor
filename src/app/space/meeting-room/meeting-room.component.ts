@@ -17,43 +17,23 @@ export class MeetingRoomComponent {
 
   meetingRoomImgs: ImgItems[] = [{
 
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-2",
+    imgUrl: '../../assets/space/Meeting Room/P1103412.jpg',
+    name: "",
+    descrioption: "",
+    span: "col-span-3",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-1",
-  },
-  {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Meeting Room/P1103415.jpg',
+    name: "",
+    descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-2",
-
-  }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-1",
-  }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-1",
-
-  }
-
-
+    imgUrl: '../../assets/space/Meeting Room/P1103448.jpg',
+    name: "",
+    descrioption: "",
+    span: "row-span-2 col-span-2",
+  },
   ]
 
 }

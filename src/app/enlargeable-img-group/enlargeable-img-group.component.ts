@@ -23,8 +23,6 @@ import { MatRippleModule } from '@angular/material/core';
 export class EnlargeableImgGroupComponent {
   @Input() images: ImgItems[] = [];
 
-
-
   // privateOfficelistItems: ListItems[] = [
   //   {
   //     list: "Shared seating",

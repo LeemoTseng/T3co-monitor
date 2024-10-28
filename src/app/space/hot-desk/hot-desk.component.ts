@@ -17,42 +17,35 @@ export class HotDeskComponent {
   dynamicLinkBackTo:string = "/space";
 
     hotDeskImgs: ImgItems[] = [{
-    imgUrl: 'https://picsum.photos/2100/900',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Hot Desk/booth desk_1.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/2100',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Hot Desk/booth desk_2.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Hot Desk/Hot-Desk.png',
+    name: "",
+    descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Hot Desk/P1103385.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-2",
 
   }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-1",
-  }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "col-span-1",
-
-  }
-
+    imgUrl: '../../assets/space/Hot Desk/P1103465.jpg',
+    name: "",
+    descrioption: "",
+    span: "col-span-2",
+  }, 
   ]
 
 }

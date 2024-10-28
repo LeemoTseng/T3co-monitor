@@ -11,12 +11,13 @@
     class="plan relative rounded-xl overflow-hidden cursor-pointer"
   >
     <div
-      class="text text-center drop-shadow-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      class="text text-center drop-shadow-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
     >
       <p class="text-6xl text-white font-bold">{{ item.name }}</p>
       <p class="text-white text-3xl pt-5">{{ item.description }}</p>
     </div>
-    <div class="imgbox overflow-hidden w-[960px] h-[480px] rounded-xl">
+    <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+    <div class="imgbox overflow-hidden w-[1000px] h-[480px] rounded-xl">
       <img class="w-full h-full object-cover" [src]="item.imgUrl" alt="" />
     </div>
   </div>

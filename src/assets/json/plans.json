@@ -3,7 +3,7 @@
     {
       "name": "Hot Desk",
       "description": "Ideal for freelancers, remote professionals & digital nomads",
-      "imgUrl": "https://picsum.photos/id/684/600/400",
+      "imgUrl": "../../assets/Plan 照片/Hot-Desk.png",
       "price": "NT$6,500/month",
       "features": [
         "Shared seating",
@@ -30,8 +30,8 @@
     {
       "name": "Dedicated Desk",
       "description": "Ideal for solopreneurs, creative professionals & remote teams.",
-      "imgUrl": "https://picsum.photos/id/684/600/400",
-      "price": "fromNT$10,000/month",
+      "imgUrl": "../../assets/Plan 照片/Dedicated-Desk.png",
+      "price": "from NT$10,000/month",
       "features": [
         "Designated seating",
         "24/7 access",
@@ -59,7 +59,7 @@
     {
       "name": "Private Office",
       "description": "Ideal for startup entrepreneurs, small & medium businesses",
-      "imgUrl": "https://picsum.photos/id/684/600/400",
+      "imgUrl": "../../assets/Plan 照片/Private-Office.png",
       "price": "Enquire now",
       "features": [
         "Secure and private rooms",

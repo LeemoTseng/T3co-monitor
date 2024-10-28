@@ -38,7 +38,7 @@ export class PlanComponent implements OnInit {
     this.httpClient.get<{ PlanItems: PlanItems[] }>('assets/json/plans.json')
       .subscribe(data => {
         this.plans = data.PlanItems;
-        console.log(this.plans);
+        // console.log(this.plans);
       })
   }
 
@@ -56,7 +56,6 @@ export class PlanComponent implements OnInit {
     this.selectedPlanItem = item;
     // console.log(item)
   }
-
   closePlanItem() {
     this.isOpen = false;
   }

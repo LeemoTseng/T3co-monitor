@@ -1,4 +1,4 @@
-import { Component,  } from '@angular/core';
+import { Component, } from '@angular/core';
 import { HeaderComponent } from "../../header/header.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { ImgItems } from '../../interface/img-items';
@@ -15,39 +15,46 @@ export class OpenAreaComponent {
   dynamicFooter: string = "Back to Space";
   dynamicLinkBackTo: string = "/space";
 
-    openAreaImgs: ImgItems[] = [{
-    imgUrl: 'https://picsum.photos/210/900',
-    name: "title",
-    descrioption: "description",
+  openAreaImgs: ImgItems[] = [{
+    imgUrl: '../../assets/space/Open Area/P1103389.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: 'https://picsum.photos/600/210',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Open Area/P1103438.png',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
-    span: "row-span-2",
+    imgUrl: '../../assets/space/Open Area/P1103443.jpg',
+    name: "",
+    descrioption: "",
+    span: "col-span-1",
   },
   {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Open Area/P1103446.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-2",
 
   }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Open Area/P1103455.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: 'https://picsum.photos/600/402',
-    name: "title",
-    descrioption: "description",
+    imgUrl: '../../assets/space/Open Area/P1103466.jpg',
+    name: "",
+    descrioption: "",
+    span: "col-span-1",
+
+  }
+    , {
+    imgUrl: '../../assets/space/Open Area/P1103467.jpg',
+    name: "",
+    descrioption: "",
     span: "col-span-1",
 
   }

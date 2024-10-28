@@ -36,7 +36,7 @@ export class SpaceComponent {
   spaceItems: SpaceItems[] = [{
     name: 'Private Office',
     linkTo: '/space/private-office',
-    imgUrl: 'https://picsum.photos/600/400',
+    imgUrl: '../../assets/space/Private-office-縮圖.png',
     colSpan: "",
     rowSpan: "row-span-2",
   },
@@ -45,23 +45,20 @@ export class SpaceComponent {
     linkTo: '/space/hot-desk',
     colSpan: "col-span-1",
     rowSpan: "",
-    imgUrl: 'https://picsum.photos/600/401',
-
+    imgUrl: '../../assets/space/Hot Desk 縮圖.jpg',
   },
   {
     name: 'Open Area',
     linkTo: '/space/open-area',
     colSpan: "col-span-1",
     rowSpan: "",
-    imgUrl: 'https://picsum.photos/600/402',
-
+    imgUrl: '../../assets/space/Open-Area-縮圖.png',
   }, {
     name: 'Meeting Room',
     linkTo: '/space/meeting-room',
     colSpan: "col-span-2",
     rowSpan: "",
-    imgUrl: 'https://picsum.photos/600/403',
-
+    imgUrl: '../../assets/space/Meeting Room 縮圖.jpg',
   }]
 
 }

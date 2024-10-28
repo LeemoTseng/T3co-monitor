@@ -47,7 +47,7 @@ export class PartnersAndMembersComponent {
     },
     {
       logo: "CrossBond",
-      link: "../../assets/partner-logo/logo.png-4.png",
+      link: "../../assets/partner-logo/CB 橫式彩.png",
       title: "",
       subtitle: ""
     },
