@@ -3,6 +3,7 @@ import { HeaderComponent } from "../header/header.component";
 import { FooterComponent } from "../footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { itemAnimation, showUpAnimation } from '../../animation';
+import { EventComponent } from '../event/event.component';
 
 
 interface LogoItems {
@@ -16,7 +17,7 @@ interface LogoItems {
 @Component({
   selector: 'app-partners-and-members',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule],
+  imports: [HeaderComponent, FooterComponent, CommonModule, EventComponent],
   templateUrl: './partners-and-members.component.html',
   animations:[itemAnimation]
 })

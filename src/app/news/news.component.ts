@@ -11,6 +11,7 @@ import { MatIcon } from '@angular/material/icon';
 import { NewsItems } from '../interface/news-items';
 import { HttpClient } from '@angular/common/http';
 import { SharedModule } from '../../shared.module';
+import { EventComponent } from '../event/event.component';
 
 @Component({
   selector: 'app-news',
@@ -20,7 +21,7 @@ import { SharedModule } from '../../shared.module';
   width: 100%;
   overflow: hidden;
 }`],
-  imports: [HeaderComponent, FooterComponent, SharedModule, NgFor, RouterLink, CommonModule, MatRippleModule, MatIcon],
+  imports: [HeaderComponent, FooterComponent, SharedModule, NgFor, RouterLink, CommonModule, MatRippleModule, MatIcon, EventComponent],
   templateUrl: './news.component.html',
   animations: [
     trigger('viewItemAnimation', [

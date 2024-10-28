@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router, RouterModule } from '@angular/router';
+import { EventComponent } from '../event/event.component';
 
 
 interface QuizItems {
@@ -20,7 +21,7 @@ interface QuizItems {
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, CommonModule, MatCardModule, MatIconModule, MatListModule, MatRippleModule, RouterModule],
+  imports: [HeaderComponent, FooterComponent, CommonModule, MatCardModule, MatIconModule, MatListModule, MatRippleModule, RouterModule, EventComponent],
   templateUrl: './quiz.component.html',
   animations: [
     trigger('viewQuizItemAnimation', [

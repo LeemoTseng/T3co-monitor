@@ -5,11 +5,12 @@ import { MatRippleModule } from '@angular/material/core';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { EventComponent } from '../event/event.component';
 
 @Component({
   selector: 'app-home-menu',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, MatRippleModule, RouterModule],
+  imports: [HeaderComponent, CommonModule, MatRippleModule, RouterModule, EventComponent],
   templateUrl: './home-menu.component.html',
   animations: [
     trigger('showUpAnimation', [

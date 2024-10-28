@@ -6,6 +6,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { HttpClient } from '@angular/common/http';
 import { itemAnimation, showUpAnimation } from '../../animation';
+import { EventComponent } from '../event/event.component';
 
 
 interface PlanItems {
@@ -20,7 +21,7 @@ interface PlanItems {
 @Component({
   selector: 'app-plan',
   standalone: true,
-  imports: [MatRippleModule, SharedModule, HeaderComponent, FooterComponent],
+  imports: [MatRippleModule, SharedModule, HeaderComponent, FooterComponent, EventComponent],
   templateUrl: './plan.component.html',
   animations: [
     trigger('viewPlanItemAnimation', [

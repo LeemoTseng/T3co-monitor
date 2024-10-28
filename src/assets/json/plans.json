@@ -14,16 +14,16 @@
       ],
       "icons": [
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "share",
+          "description": "Shared seating"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "hub",
+          "description": "Hybrid work flexibility"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "attach_money",
+          "description": "Cost-effective"
         }
       ]
     },
@@ -43,16 +43,16 @@
       ],
       "icons": [
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "desktop_windows",
+          "description": "Designed seating"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "account_circle",
+          "description": "Consistency and Personalization"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "event_seat",
+          "description": "Electric height adjustable desks"
         }
       ]
     },
@@ -72,16 +72,16 @@
       ],
       "icons": [
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "fingerprint",
+          "description": "Secure and private rooms"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "event_seat",
+          "description": "Electric height adjustable desks"
         },
         {
-          "name": "rocket_launch",
-          "description": "Complimentary"
+          "name": "groups",
+          "description": "Team Collaboration"
         }
       ]
     }

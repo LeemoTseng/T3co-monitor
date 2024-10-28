@@ -7,6 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
 import { MatRippleModule } from '@angular/material/core';
 
 import { itemAnimation, showUpAnimation } from '../../animation';
+import { EventComponent } from '../event/event.component';
 
 interface SpaceItems {
   name: string;
@@ -19,7 +20,7 @@ interface SpaceItems {
 @Component({
   selector: 'app-space',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, RouterModule, MatRippleModule, FooterComponent],
+  imports: [CommonModule, HeaderComponent, RouterModule, MatRippleModule, FooterComponent, EventComponent],
   templateUrl: './space.component.html',
   animations: [showUpAnimation,itemAnimation]
 })
