@@ -3,6 +3,7 @@ import { HeaderComponent } from "../../header/header.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { ImgItems } from '../../interface/img-items';
 import { EnlargeableImgGroupComponent } from '../../enlargeable-img-group/enlargeable-img-group.component';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-open-area',
@@ -13,46 +14,46 @@ import { EnlargeableImgGroupComponent } from '../../enlargeable-img-group/enlarg
 export class OpenAreaComponent {
   dynamicTitle: string = "Open Area";
   dynamicFooter: string = "Back to Space";
-  dynamicLinkBackTo: string = "/space";
+  dynamicLinkBackTo: string = `${environment.linkBaseUrl}/space`;
 
   openAreaImgs: ImgItems[] = [{
-    imgUrl: '../../assets/space/Open-Area/P1103389.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103389.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-2",
   },
   {
-    imgUrl: '../../assets/space/Open-Area/P1103438.png',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103438.png`,
     name: "",
     descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: '../../assets/space/Open-Area/P1103443.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103443.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-1",
   },
   {
-    imgUrl: '../../assets/space/Open-Area/P1103446.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103446.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-2",
 
   }, {
-    imgUrl: '../../assets/space/Open-Area/P1103455.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103455.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-1",
   }, {
-    imgUrl: '../../assets/space/Open-Area/P1103466.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103466.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-1",
 
   }
     , {
-    imgUrl: '../../assets/space/Open-Area/P1103467.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Open-Area/P1103467.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-1",

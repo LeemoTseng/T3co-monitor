@@ -1,43 +1,57 @@
 <app-header
+  *ngIf="!isChildRouteActive"
   @showUpAnimation
   [isHomeMenu]="subIsHomeMenu"
   [pageTitle]="dynamicTitle"
 ></app-header>
-<app-event></app-event>
-<div
-  @showUpAnimation
-  class="menu grid grid-cols-2 grid-rows-3 gap-5 h-[1480px] w-full"
->
-  <a
-    @itemAnimation
-    *ngFor="let item of spaceItems"
-    matRipple
-    [matRippleColor]="rippleColor"
-    [matRippleRadius]="radius"
-    [routerLink]="item.linkTo"
-    [class]="
-      item.colSpan +
-      item.rowSpan +
-      ' ' +
-      'pressing-effect cursor-pointer rounded-2xl relative overflow-hidden'
-    "
+
+<!-- 動態顯示選單或子內容 -->
+<div *ngIf="!isChildRouteActive">
+  <!-- 主選單內容 -->
+  <app-event></app-event>
+  <div
+    @showUpAnimation
+    class="menu grid grid-cols-2 grid-rows-3 gap-5 h-[1480px] w-full"
   >
-    <div class="title">
-      <h1
-        class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
-      >
-        {{ item.name }}
-      </h1>
-      <div class="img absolute inset-0">
-        <img
-          class="w-full h-full object-cover transform transition active:scale-150"
-          [src]="item.imgUrl"
-          alt=""
-        />
-        <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+    <a
+      @itemAnimation
+      *ngFor="let item of spaceItems"
+      matRipple
+      [matRippleColor]="rippleColor"
+      [matRippleRadius]="radius"
+      [routerLink]="item.linkTo"
+      [class]="
+        item.colSpan +
+        item.rowSpan +
+        ' ' +
+        'pressing-effect cursor-pointer rounded-2xl relative overflow-hidden'
+      "
+    >
+      <div class="title">
+        <h1
+          class="text-white opacity-90 absolute p-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        >
+          {{ item.name }}
+        </h1>
+        <div class="img absolute inset-0">
+          <img
+            class="w-full h-full object-cover transform transition active:scale-150"
+            [src]="item.imgUrl"
+            alt=""
+          />
+          <div class="absolute inset-0 bg-slate-950 bg-opacity-30 z-10"></div>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </div>
 
-<app-footer [pageFooter]="dynamicFooter"></app-footer>
+<!-- 當子路由啟用時顯示子頁內容 -->
+<div *ngIf="isChildRouteActive">
+  <router-outlet></router-outlet>
+</div>
+
+<app-footer
+  *ngIf="!isChildRouteActive"
+  [pageFooter]="dynamicFooter"
+></app-footer>

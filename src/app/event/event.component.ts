@@ -1,6 +1,7 @@
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-event',
@@ -31,6 +32,10 @@ import { Component } from '@angular/core';
 export class EventComponent {
   isHalloween = false;
   isSpiderClicked = false;
+
+  halloweenImageUrl1=`${environment.imgBaseUrl}event/hallloween-1.png`
+  halloweenImageUrl2=`${environment.imgBaseUrl}event/hallloween-2.png`
+  halloweenImageUrl3=`${environment.imgBaseUrl}event/Comp-1_2.gif`
 
   netClicked() {
     this.isHalloween = true;

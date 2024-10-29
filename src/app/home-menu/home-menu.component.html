@@ -4,11 +4,11 @@
   muted
   loop
   class="blur-sm absolute top-0 left-0 w-full h-full object-cover"
-  src="../../assets/T3Co-For-Web-30sec-720p.mp4"
+  [src]="videoImg"
 ></video>
 
 <div class="logo absolute">
-  <img class="w-[300px]" src="../../assets/logo.png" alt="" />
+  <img class="w-[300px]" [src]="logImg" alt="" />
 </div>
 <div @showUpAnimation *ngIf="isOpened" class="menu grid grid-cols-4 gap-5">
   <div class="pt-[500px]"></div>

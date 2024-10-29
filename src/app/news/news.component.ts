@@ -12,6 +12,7 @@ import { NewsItems } from '../interface/news-items';
 import { HttpClient } from '@angular/common/http';
 import { SharedModule } from '../../shared.module';
 import { EventComponent } from '../event/event.component';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-news',
@@ -38,7 +39,11 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.httpClient.get<{ newsList: NewsItems[] }>('assets/json/news.json')
       .subscribe(data => {
-        this.news = data.newsList;
+        this.news = data.newsList.map(item=>({
+          ...item,
+          src: `${environment.imgBaseUrl}${item.src}`,
+          qrcode: `${environment.imgBaseUrl}${item.qrcode}`
+        }))
         console.log(this.news);
       })
   }

@@ -3,6 +3,7 @@ import { HeaderComponent } from "../../header/header.component";
 import { EnlargeableImgGroupComponent } from "../../enlargeable-img-group/enlargeable-img-group.component";
 import { FooterComponent } from "../../footer/footer.component";
 import { ImgItems } from '../../interface/img-items';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-meeting-room',
@@ -13,23 +14,23 @@ import { ImgItems } from '../../interface/img-items';
 export class MeetingRoomComponent {
   dynamicTitle: string = "Meeting Room";
   dynamicFooter: string = "Back to Space";
-  dynamicLinkBackTo: string = "/space";
+  dynamicLinkBackTo: string = `${environment.linkBaseUrl}/space`;
 
   meetingRoomImgs: ImgItems[] = [{
 
-    imgUrl: '../../assets/space/Meeting-Room/P1103412.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Meeting-Room/P1103412.jpg`,
     name: "",
     descrioption: "",
     span: "col-span-3",
   },
   {
-    imgUrl: '../../assets/space/Meeting-Room/P1103415.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Meeting-Room/P1103415.jpg`,
     name: "",
     descrioption: "",
     span: "row-span-2",
   },
   {
-    imgUrl: '../../assets/space/Meeting-Room/P1103448.jpg',
+    imgUrl: `${environment.imgBaseUrl}space/Meeting-Room/P1103448.jpg`,
     name: "",
     descrioption: "",
     span: "row-span-2 col-span-2",

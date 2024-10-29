@@ -20,18 +20,5 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
 
-  isLoading: boolean = true;
-
-  constructor(private router: Router) {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationStart) {
-        this.isLoading = true;
-        console.log('NavigationStart: Loading spinner shown');
-      } else if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        this.isLoading = false;
-        console.log('NavigationEnd/Cancel/Error: Loading spinner hidden');
-      }
-    })
-  }
 
 }

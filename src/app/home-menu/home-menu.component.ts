@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import { MenuItems } from '../interface/menu-items';
 import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
-import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { EventComponent } from '../event/event.component';
+import { environment } from '../../environments/environment';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-menu',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, MatRippleModule, RouterModule, EventComponent],
+  imports: [HeaderComponent, CommonModule, MatRippleModule, EventComponent, RouterModule],
   templateUrl: './home-menu.component.html',
   animations: [
     trigger('showUpAnimation', [
@@ -22,10 +23,13 @@ import { EventComponent } from '../event/event.component';
   ]
 })
 export class HomeMenuComponent {
+
   dynamicTitle: string = "Welcome to <br />Premiere New <br />Coworking Space.";
   rippleColor: string = 'rgba(255, 255, 255, 0.2)';
   radius: number = 500;
   
+  logImg=`${environment.imgBaseUrl}logo.png`
+  videoImg=`${environment.imgBaseUrl}T3Co-For-Web-30sec-720p.mp4`
 
   isOpened: boolean = false;
 
@@ -36,32 +40,32 @@ export class HomeMenuComponent {
   menuItems: MenuItems[] = [
     {
       name: 'space',
-      imgUrl: 'https://picsum.photos/600/400',
-      linkTo: '/space',
+      imgUrl: '',
+      linkTo:  `/space`,
       colSpan: 'col-span-4'
     },
     {
       name: 'plan',
-      imgUrl: 'https://picsum.photos/600/401',
-      linkTo: '/plan',
+      imgUrl: '',
+      linkTo: `/plan`,
       colSpan: 'col-span-2'
     },
     {
       name: 'PARTNER & MEMBER',
-      imgUrl: 'https://picsum.photos/600/402',
-      linkTo: '/partners-and-members',
+      imgUrl: '',
+      linkTo: `/partners-and-members`,
       colSpan: 'col-span-2'
     },
     {
       name: 'news',
-      imgUrl: 'https://picsum.photos/600/405',
-      linkTo: '/news',
+      imgUrl: '',
+      linkTo: `/news`,
       colSpan: 'col-span-3'
     },
     {
       name: 'quiz',
-      imgUrl: 'https://picsum.photos/600/403',
-      linkTo: '/quiz',
+      imgUrl: '',
+      linkTo: `/quiz`,
       colSpan: 'col-span-1'
     }
   ];

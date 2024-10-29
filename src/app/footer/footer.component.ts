@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { environment } from '../../environments/environment';
 
 interface iconSet{
   name: string,
@@ -17,7 +18,7 @@ interface iconSet{
 })
 export class FooterComponent {
   @Input()pageFooter:string = "Back to Home"
-  @Input()pageLinkBackTo:string = "/home-menu"
+  @Input()pageLinkBackTo:string = `${environment.linkBaseUrl}/home`
   @Input()footerStyle:string = ""
 
   isStyle: boolean = true

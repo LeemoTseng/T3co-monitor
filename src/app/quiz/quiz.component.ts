@@ -9,6 +9,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Router, RouterModule } from '@angular/router';
 import { EventComponent } from '../event/event.component';
+import { environment } from '../../environments/environment';
 
 
 interface QuizItems {
@@ -44,6 +45,8 @@ interface QuizItems {
 export class QuizComponent {
   dynamicTitle: string = "Quiz"
   dynamicFooter: string = "Back to Home"
+
+  quizImg=`${environment.imgBaseUrl}quiz.png`
 
   // Ripple
   rippleColor: string = 'rgba(255, 255, 255, 0.2)';

@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  imgBaseUrl: '/assets/'
+  imgBaseUrl: '/src/assets/',
+  linkBaseUrl: '/dist/menu/browser'
 };

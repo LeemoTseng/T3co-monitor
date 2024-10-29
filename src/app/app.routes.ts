@@ -13,35 +13,68 @@ import { QuizComponent } from './quiz/quiz.component';
 // import { BatContainerComponent } from './festival/bat-container/bat-container.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeMenuComponent },
-  // Space
-  { path: 'space', component: SpaceComponent },
-  { path: 'space/private-office', component: PrivateOfficeComponent },
-  { path: 'space/hot-desk', component: HotDeskComponent },
-  { path: 'space/open-area', component: OpenAreaComponent },
-  { path: 'space/meeting-room', component: MeetingRoomComponent },
-  // Plan
-  {path:'plan', component:PlanComponent},
-  // Partners and Members
   {
-    path: 'partners-and-members', component: PartnersAndMembersComponent
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full', // 將根路徑重定向到 'home'
   },
-  //news
-  {path:'news', component:NewsComponent},
-  //quiz
-  {path:'quiz',component:QuizComponent},
-
-  //test
-  // {path:'test',component:BatContainerComponent},
-
-  // other
-
-  { path: '**', redirectTo: '' } // redirect to home-menu
-
+  {
+    path: 'home',
+    component: HomeMenuComponent, // 主頁面的組件
+  },
+  // Space module
+  {
+    path: 'space',
+    component: SpaceComponent,
+    children: [
+      {
+        path: 'private-office',
+        component: PrivateOfficeComponent,
+      },
+      {
+        path: 'hot-desk',
+        component: HotDeskComponent,
+      },
+      {
+        path: 'open-area',
+        component: OpenAreaComponent,
+      },
+      {
+        path: 'meeting-room',
+        component: MeetingRoomComponent,
+      },
+    ],
+  },
+  // Plan module
+  {
+    path: 'plan',
+    component: PlanComponent,
+  },
+  // Partners and Members module
+  {
+    path: 'partners-and-members',
+    component: PartnersAndMembersComponent,
+  },
+  // News module
+  {
+    path: 'news',
+    component: NewsComponent,
+  },
+  // Quiz module
+  {
+    path: 'quiz',
+    component: QuizComponent,
+  },
+  // Wildcard route for undefined paths
+  {
+    path: '**',
+    redirectTo: 'home', 
+  },
 ];
 
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -7,6 +7,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { HttpClient } from '@angular/common/http';
 import { itemAnimation, showUpAnimation } from '../../animation';
 import { EventComponent } from '../event/event.component';
+import { environment } from '../../environments/environment';
 
 
 interface PlanItems {
@@ -38,8 +39,11 @@ export class PlanComponent implements OnInit {
   ngOnInit(): void {
     this.httpClient.get<{ PlanItems: PlanItems[] }>('assets/json/plans.json')
       .subscribe(data => {
-        this.plans = data.PlanItems;
-        // console.log(this.plans);
+        this.plans = data.PlanItems.map(item => ({
+          ...item,
+          imgUrl: `${environment.imgBaseUrl}${item.imgUrl}`,
+        }));
+        console.log(this.plans);
       })
   }
 
