@@ -1,9 +1,12 @@
-name: Deploy Angular Project
+name: CI/CD Pipeline
 
 on:
   push:
     branches:
-      - main  # 當 push 到 main 分支時觸發部署
+      - main # 每次推送到 main 分支時觸發此工作流程
+
+permissions:
+  contents: write # 設置 GITHUB_TOKEN 的寫入權限
 
 jobs:
   build:
@@ -12,19 +15,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: "16"
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Angular project
-        run: npm run build --prod
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
+        run: npm run build --if-present
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/<your-project-name>
+          publish_branch: viewer # 將構建結果推送到 viewer 分支
+          publish_dir: ./dist # 構建輸出目錄
