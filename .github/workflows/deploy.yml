@@ -41,4 +41,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: viewer # 將構建結果推送到 viewer 分支
-          publish_dir: ./dist # 構建輸出目錄
+          publish_dir: ./dist/menu/browser # 構建輸出目錄
