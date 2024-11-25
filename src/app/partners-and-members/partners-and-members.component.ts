@@ -23,9 +23,8 @@ interface LogoItems {
   animations:[itemAnimation]
 })
 export class PartnersAndMembersComponent {
-  dynamicTitle: string = "Partners and Members"
-  dynamicFooter: string = "Back to Home"
-  dynamicLinkBackTo: string = "/home-menu"
+  dynamicTitle = "Partners and Members"
+  dynamicFooter = "Back to Home"
 
 
   //logos
